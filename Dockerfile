@@ -9,9 +9,9 @@ RUN composer require "laravel/installer" && \
     ln -s /laravel-installer/vendor/laravel/installer/laravel /usr/local/bin/laravel && \
     chmod +x /usr/local/bin/laravel
 
-RUN mkdir -p /data/www
-VOLUME ["/data/www"]
-WORKDIR /data/www
+RUN mkdir -p /data
+VOLUME ["/data"]
+WORKDIR /data
 
 ENTRYPOINT ["laravel"]
 CMD ["--help --ansi"]
